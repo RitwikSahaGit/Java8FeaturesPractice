@@ -1,29 +1,28 @@
 package interfaceExmple;
 
-public class Implementation implements Interface {
+public class Implementation implements Interface, InterfaceTwo {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		
+		//Static methods needs to be called by name of the interface
 		Interface obj= new Implementation();
 		Interface.staticMethod();
-		
-		
-		
+		//default and abstract method can be called by the implementation class
 		obj.defaultMethod();
 		obj.show();
-
 	}
 
 	@Override
 	public void show() {
-		// TODO Auto-generated method stub
 		System.out.println("Abstact method defined in Implementation class");
 		
 	}
 	
+	@Override
 	public void defaultMethod() {
-		System.out.println("Ovverridden in Implementation class");
+		Interface.super.defaultMethod();
+		//If one Implementation class Implements 2 Interfaces.
+		//if 2 interfaces have Same default method then we have to mention which default method we want to call.
+		//to overcome the ambiguity
+		//https://www.youtube.com/watch?v=b4paTLGsJjE&list=PLA3GkZPtsafZR6arC1A3N0i968gk9RvMv&index=6
 	}
-
 }

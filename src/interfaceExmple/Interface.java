@@ -7,7 +7,7 @@ public interface Interface {
 	
 	//In functionalInterface any number of Static and Default method 
 	static void staticMethod() {
-		System.out.println("In Static methos of the Interface" );
+		System.out.println("In Static method of the Interface" );
 	}
 	//Only one Abstract method. SAM = Single Abstract Method
 	public void show();
