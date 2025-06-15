@@ -1,5 +1,6 @@
 package interfaceExmple;
 
+
 public interface InterfaceTwo {
 	
 	default void defaultMethod() {
