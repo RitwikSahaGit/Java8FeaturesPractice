@@ -12,7 +12,7 @@ public class Tester {
 //			obj.show();
 		
 		Interface i = ()->System.out.println("Inside the Snow of Interface");	
-		i.show();
+		i.show();// With the use of lambda  
 
 	}
 
